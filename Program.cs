@@ -7,12 +7,14 @@ namespace GuessingGame
         static void Main(string[] args)
         {
             int count = 1;
-            int secretNum = 42;
+            Random r = new Random();
+            int secretNum = r.Next(1, 101);
             int guess = 0;
 
             while (count < 5 && guess != secretNum)
             {
                 Console.WriteLine("Can you guess the secret number?");
+                Console.WriteLine($"Number of guesses left: {5 - count}");
                 if (count > 1)
                 {
                     Console.Write($"Your guess ({guess}): ");
