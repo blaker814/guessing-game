@@ -18,14 +18,7 @@ namespace GuessingGame
                 while (guess != secretNum)
                 {
                     Console.WriteLine("Can you guess the secret number?");
-                    if (count > 0)
-                    {
-                        Console.Write($"Your guess ({guess}): ");
-                    }
-                    else
-                    {
-                        Console.Write($"Your guess: ");
-                    }
+                    Console.Write($"Your guess ({count + 1}): ");
                     guess = int.Parse(Console.ReadLine());
                     if (secretNum == guess)
                     {
@@ -52,14 +45,7 @@ namespace GuessingGame
                 {
                     Console.WriteLine("Can you guess the secret number?");
                     Console.WriteLine($"Number of guesses left: {totalGuesses - count}");
-                    if (count > 0)
-                    {
-                        Console.Write($"Your guess ({guess}): ");
-                    }
-                    else
-                    {
-                        Console.Write($"Your guess: ");
-                    }
+                    Console.Write($"Your guess ({count + 1}): ");
                     guess = int.Parse(Console.ReadLine());
 
                     if (secretNum == guess)
