@@ -32,6 +32,14 @@ namespace GuessingGame
                 else
                 {
                     Console.WriteLine("WRONG!");
+                    if (guess > secretNum)
+                    {
+                        Console.WriteLine("Your guess was too high");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your guess was too low");
+                    }
                 }
                 count++;
             }
